@@ -1,40 +1,51 @@
-.mmap__responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.mmap__responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
-.map__responsive iframe{
-    left:0;
-    top:0;
-    height:40vw;
-    width:100%;
+.map__responsive iframe {
+  left: 0;
+  top: 0;
+  height: 40vw;
+  width: 100%;
 }
 
-.oeuvres-section__before-title::before {
-    display: block;
-    content:"Test de titre";
+// OEUVRES-----------------------------------------
+
+.oeuvres__section-container {
+  margin: 4rem $margin-row-general;
 }
-.oeuvres-section__container {
+
+.oeuvres__section__box {
+  @include grid-column-autofit(12rem, 1fr, 6vw, 2rem);
+  // Parameters: min, max (in minmax()), column gap, row gap
+}
+.oeuvre__h2 {
+  margin: 1rem;
+}
+.oeuvres__section-article {
+  aspect-ratio: 1 / 1.2;
+
+  .oeuvres__section-article-figure-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+// PARCOURS----------------------------------------- s
+
+.parcours__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// INMANQUABLE-----------------------------------------
+
+.inmanquable__section-container {
     margin: 4rem $margin-row-general;
-    // h2 {
-    //     position: relative;
-    //     top: -2rem;
-    //     left: 1rem;
-    //     z-index: -1;
-    //{
 }
-
-// .oeuvre-article-notitle {
-//     margin-top: $margin-top-h2-heigh-size;
-// }
-.oeuvres-section__flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1.8rem;
-}
-.oeuvres-section__article-figure {
-    max-width: 16rem;
-}
+.inmanquable__section-box {
+    @include grid-column-autofit(12rem, 1fr, 6vw, 2rem);
+    // Parameters: min, max (in minmax()), column gap, row gap
+  }

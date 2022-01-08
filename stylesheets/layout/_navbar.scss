@@ -1,0 +1,19 @@
+nav {
+    position: sticky;
+    top: 0px;
+    // box-shadow: 0px 3px 4px rgba(116, 116, 116, 0.39), 0px -3px 4px rgba(143, 143, 143, 0.39);
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: $navbar-background-color;
+  }
+  li {
+    list-style-type: none;
+    flex-basis: 8%;
+    text-align: center;
+    font-size: $navbar-text-fontsize;
+    padding: $navbar-li-padding;
+    margin: $navbar-li-margin;
+  }
