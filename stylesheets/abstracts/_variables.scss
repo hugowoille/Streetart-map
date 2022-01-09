@@ -56,11 +56,16 @@ $base-url: '/assets/' !default;
 // general
 
 $h2-general-fontsize: 2em;
+$background-color: #563A36;
+$body-text-color: #ECDBBA;
+
+// footer and navbar
+
+$navbar-footer-bg-color: #292B29;
+$navbar-footer-font-color: #8E635B;
 
 // Navbar
 $navbar-logo-size: 7rem;
-$navbar-background-color: rgb(6, 10, 8);
-$navbar-text-font-color: rgb(45, 47, 49);
 $navbar-text-fontsize: 1.5em;
 $navbar-li-padding: 1rem 0;
 $navbar-li-margin: 0.1vw;
@@ -69,7 +74,6 @@ $navbar-li-margin: 0.1vw;
 // Footer 
 $social-media-size: 1.8em;
 $footer-copyright-margin: 0;
-$footer-background-color: rgb(233, 233, 233);
 
 // Margin
 $margin-row-general: 15vw;
