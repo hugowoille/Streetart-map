@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -394,6 +395,11 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
   font-size: 2em;
 }
 
+@font-face {
+  font-family: molotRegular;
+  src: url(font/Molot.otf);
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -466,7 +472,7 @@ body {
 }
 
 .navbar__logo {
-  width: 7rem;
+  width: 8rem;
   height: auto;
 }
 
@@ -506,20 +512,28 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  background-color: #060a08;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #292B29;
 }
 
 li {
   list-style-type: none;
-  -ms-flex-preferred-size: 8%;
-      flex-basis: 8%;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
   text-align: center;
   font-size: 1.5em;
   padding: 1rem 0;
   margin: 0.1vw;
+}
+
+li .navbar__links {
+  text-decoration: none;
+  font-family: "molotRegular", sans-serif;
+  color: #ada188;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .mmap__responsive {
@@ -537,29 +551,98 @@ li {
 }
 
 .oeuvres__section-container {
-  margin: 4rem 15vw;
+  margin: 2rem auto 5rem auto;
+  max-width: 70rem;
+}
+
+@media screen and (max-width: 1060px) {
+  .oeuvres__section-container {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .oeuvres__section-container {
+    max-width: 45rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oeuvres__section-container {
+    max-width: 35rem;
+  }
+}
+
+.home-oeuvre__h2 {
+  margin: 4rem 3rem;
 }
 
 .oeuvres__section__box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  -webkit-column-gap: 6vw;
-          column-gap: 6vw;
-  row-gap: 2rem;
+  -ms-grid-columns: (minmax(200px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+  margin-inline: 2rem;
 }
 
-.oeuvre__h2 {
-  margin: 1rem;
+@media screen and (max-width: 1060px) {
+  .oeuvres__section__box {
+    -ms-grid-columns: (minmax(200px, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .oeuvres__section__box {
+    -ms-grid-columns: (minmax(200px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oeuvres__section__box {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 }
 
 .oeuvres__section-article {
   aspect-ratio: 1 / 1.2;
 }
 
-.oeuvres__section-article .oeuvres__section-article-figure-img {
+@media screen and (max-width: 800px) {
+  .oeuvres__section-article {
+    aspect-ratio: 1 / 0.7;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oeuvres__section-article {
+    aspect-ratio: 1 / 0.55;
+  }
+}
+
+.oeuvres__section-article-figure-img {
   aspect-ratio: 1 / 1;
+}
+
+@media screen and (max-width: 800px) {
+  .oeuvres__section-article-figure-img {
+    aspect-ratio: 1 / 0.7;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .oeuvres__section-article-figure-img {
+    aspect-ratio: 1 / 0.55;
+  }
 }
 
 .parcours__container {
@@ -573,10 +656,11 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10rem 0;
 }
 
 .inmanquable__section-container {
-  margin: 4rem 15vw;
+  margin: 4rem 18vw;
 }
 
 .inmanquable__section-box {
