@@ -529,7 +529,13 @@ li {
   margin: 0.1vw;
 }
 
-<<<<<<< HEAD
+li .navbar__links {
+  text-decoration: none;
+  font-family: "Molot", sans-serif;
+  color: #ECDBBA;
+  font-size: 1.5em;
+}
+
 .artistes__article a {
   display: inline-block;
   position: relative;
@@ -544,20 +550,6 @@ li {
   border: none;
   border-radius: 0.5em;
   background-color: #272a2c;
-}
-
-.mmap__responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-=======
-li .navbar__links {
-  text-decoration: none;
-  font-family: "Molot", sans-serif;
-  color: #ECDBBA;
-  font-size: 1.5em;
->>>>>>> 0b976365ef302cd5f63c4d997e18fa40df9c1714
 }
 
 .oeuvres__global-container {
@@ -735,7 +727,6 @@ li .navbar__links {
 }
 
 body {
-  background: #563A36;
   margin: 0;
 }
 
