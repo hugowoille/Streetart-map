@@ -658,11 +658,6 @@ li .navbar__links {
   padding: 1rem 0;
 }
 
-.parcours__global-container {
-  margin: 2rem auto 5rem auto;
-  max-width: 70rem;
-}
-
 .parcours__flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,7 +677,7 @@ li .navbar__links {
   margin: 0 2rem;
 }
 
-.parcours__article-figure img {
+.parcours__article-figure {
   height: 25rem;
   max-width: 60rem;
 }

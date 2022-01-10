@@ -103,10 +103,10 @@ $home-media3: 620px;
 
 // PARCOURS------------------------------------------------------------------------------------------------
 
-.parcours__global-container {
-  margin: 2rem auto 5rem auto;
-  max-width: 70rem;
-}
+// .parcours__global-container {
+//   margin: 2rem auto 5rem auto;
+//   max-width: 70rem;
+// }
 
 .parcours__flex-container {
   display: flex;
@@ -119,7 +119,7 @@ $home-media3: 620px;
 .parcours__article {
   margin: 0 2rem;
 }
-.parcours__article-figure img {
+.parcours__article-figure {
   height: 25rem;
   max-width: 60rem;
 }
