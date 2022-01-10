@@ -1,3 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+// Artistes.html button
+
+.artistes__article a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+
+.artistes__article-button {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding: 0.8em 2.8em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: $artistes-button-color;
+}
