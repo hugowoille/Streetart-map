@@ -18,6 +18,7 @@
         "components/_button.scss",
         "pages/_home.scss",
         "pages/_artiste.scss",
+        "pages/_categories.scss",
         "themes/_default.scss"
     ],
     "names": [],
