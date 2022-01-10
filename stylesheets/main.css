@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -394,8 +395,9 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
   font-size: 2em;
 }
 
-body {
-  background-color: #563A36;
+@font-face {
+  font-family: "Molot";
+  src: url("../fonts/molot-webfont.woff2") format("woff2"), url("../fonts/molot-webfont.woff") format("woff");
 }
 
 /**
@@ -511,16 +513,15 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
   background-color: #292B29;
 }
 
 li {
   list-style-type: none;
-  -ms-flex-preferred-size: 8%;
-      flex-basis: 8%;
   text-align: center;
   font-size: 1.5em;
   color: #8E635B;
@@ -528,47 +529,125 @@ li {
   margin: 0.1vw;
 }
 
-.mmap__responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
+li .navbar__links {
+  text-decoration: none;
+  font-family: "Molot", sans-serif;
+  color: #ECDBBA;
+  font-size: 1.5em;
 }
 
-.map__responsive iframe {
-  left: 0;
-  top: 0;
-  height: 40vw;
-  width: 100%;
+.oeuvres__global-container {
+  margin: 2rem auto 5rem auto;
+  max-width: 75rem;
 }
 
-.oeuvres__section-container {
-  margin: 4rem 15vw;
+@media screen and (max-width: 1140px) {
+  .oeuvres__global-container {
+    max-width: 55rem;
+  }
 }
 
-.oeuvres__section__box {
+@media screen and (max-width: 820px) {
+  .oeuvres__global-container {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .oeuvres__global-container {
+    max-width: 40rem;
+  }
+}
+
+.oeuvres__global-container .oeuvres__box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  -webkit-column-gap: 6vw;
-          column-gap: 6vw;
-  row-gap: 2rem;
+  -ms-grid-columns: (minmax(220px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+  margin-inline: 2rem;
 }
 
-.oeuvre__h2 {
-  margin: 1rem;
+@media screen and (max-width: 1140px) {
+  .oeuvres__global-container .oeuvres__box-container {
+    -ms-grid-columns: (minmax(220px, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+  }
 }
 
-.oeuvres__section-article {
+@media screen and (max-width: 820px) {
+  .oeuvres__global-container .oeuvres__box-container {
+    -ms-grid-columns: (minmax(220px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .oeuvres__global-container .oeuvres__box-container {
+    -ms-grid-columns: (minmax(220px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(220px, 1fr));
+  }
+}
+
+.oeuvres__article {
+  -webkit-box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445);
+          box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445);
   aspect-ratio: 1 / 1.2;
 }
 
-.oeuvres__section-article .oeuvres__section-article-figure-img {
+@media screen and (max-width: 820px) {
+  .oeuvres__article {
+    aspect-ratio: 1 / 0.7;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .oeuvres__article {
+    aspect-ratio: 1 / 0.55;
+  }
+}
+
+.oeuvres__article .oeuvres__article-figure-img {
   aspect-ratio: 1 / 1;
 }
 
-.parcours__container {
+@media screen and (max-width: 820px) {
+  .oeuvres__article .oeuvres__article-figure-img {
+    aspect-ratio: 1 / 0.7;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .oeuvres__article .oeuvres__article-figure-img {
+    aspect-ratio: 1 / 0.55;
+  }
+}
+
+.home-oeuvre__h2 {
+  margin: 4rem 3rem;
+}
+
+.oeuvres__article-text {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+.parcours__global-container {
+  margin: 2rem auto 5rem auto;
+  max-width: 70rem;
+}
+
+.parcours__flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,20 +658,36 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10rem auto;
+  row-gap: 3rem;
+}
+
+.parcours__article {
+  margin: 0 2rem;
+}
+
+.parcours__article-figure img {
+  height: 25rem;
+  max-width: 60rem;
 }
 
 .inmanquable__section-container {
-  margin: 4rem 15vw;
+  margin: 4rem 18vw;
 }
 
 .inmanquable__section-box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  -webkit-column-gap: 6vw;
-          column-gap: 6vw;
-  row-gap: 2rem;
+  -ms-grid-columns: (minmax(220px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+  margin-inline: 2rem;
+}
+
+.home-inmanquable__h2 {
+  margin: 4rem 3rem;
 }
 
 /**

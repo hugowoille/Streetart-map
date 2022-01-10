@@ -1,51 +1,141 @@
-.mmap__responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-.map__responsive iframe {
-  left: 0;
-  top: 0;
-  height: 40vw;
-  width: 100%;
-}
+// .map__responsive {
+//   overflow: hidden;
+//   padding-bottom: 5%;
+//   position: relative;
+//   height: 0;
+// }
+// .map__responsive iframe {
+//   left: 0;
+//   top: 0;
+//   height: 40vw;
+//   width: 100%;
+// }
 
-// OEUVRES-----------------------------------------
+// OEUVRES------------------------------------------------------------------------------------------------
 
-.oeuvres__section-container {
-  margin: 4rem $margin-row-general;
-}
+// .oeuvres__section__box {
+//   column-count: 4;
+// }
 
-.oeuvres__section__box {
-  @include grid-column-autofit(12rem, 1fr, 6vw, 2rem);
-  // Parameters: min, max (in minmax()), column gap, row gap
-}
-.oeuvre__h2 {
-  margin: 1rem;
-}
-.oeuvres__section-article {
-  aspect-ratio: 1 / 1.2;
+// .oeuvres__section__box {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   column-gap: 4rem;
+//   row-gap: 1rem;
+//   .oeuvres__article {
+//     flex-shrink: 0;
+//     flex-grow: 0;
+//     flex-basis: 210px;
+//   }
+// }
 
-  .oeuvres__section-article-figure-img {
-    aspect-ratio: 1 / 1;
+$home-grid-min: 220px; // limit article width, so overall size, but can grow up to 1fr ( see max in grid minmanx ) if enough room
+$home-media1: 1140px;
+$home-media2: 820px;
+$home-media3: 620px;
+
+.oeuvres__global-container {
+  margin: 2rem auto 5rem auto;
+  max-width: 75rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
+  @media screen and (max-width: $home-media1) {
+    max-width: 55rem;
+  }
+  @media screen and (max-width: $home-media2) {
+    max-width: 50rem;
+  }
+  @media screen and (max-width: $home-media3) {
+    max-width: 40rem;
+  }
+
+  .oeuvres__box-container {
+    @include grid-column-repeat(4, $home-grid-min, 1fr, 4rem, 1rem) {
+      margin-inline: 2rem;
+    }
+    @media screen and (max-width: $home-media1) {
+      grid-template-columns: repeat(3, minmax($home-grid-min, 1fr));
+      column-gap: 3rem;
+    }
+    @media screen and (max-width: $home-media2) {
+      grid-template-columns: repeat(2, minmax($home-grid-min, 1fr));
+      column-gap: 2.5rem;
+    }
+    @media screen and (max-width: $home-media3) {
+      grid-template-columns: repeat(1, minmax($home-grid-min, 1fr));
+    }
   }
 }
 
-// PARCOURS----------------------------------------- s
+.oeuvres__article {
+  box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
+    -1px 0 10px rgba(206, 206, 206, 0.445);
 
-.parcours__container {
+  aspect-ratio: 1 / 1.2;
+  @media screen and (max-width: $home-media2) {
+    aspect-ratio: 1 / 0.7;
+  }
+  @media screen and (max-width: $home-media3) {
+    aspect-ratio: 1 / 0.55;
+  }
+
+  .oeuvres__article-figure-img {
+    aspect-ratio: 1 / 1;
+    @media screen and (max-width: $home-media2) {
+      aspect-ratio: 1 / 0.7;
+    }
+    @media screen and (max-width: $home-media3) {
+      aspect-ratio: 1 / 0.55;
+    }
+  }
+}
+
+// -----------------
+
+.home-oeuvre__h2 {
+  margin: 4rem 3rem;
+}
+
+.oeuvres__article-text {
+  display: grid;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+// PARCOURS------------------------------------------------------------------------------------------------
+
+.parcours__global-container {
+  margin: 2rem auto 5rem auto;
+  max-width: 70rem;
+}
+
+.parcours__flex-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10rem auto;
+  row-gap: 3rem;
 }
 
-// INMANQUABLE-----------------------------------------
+.parcours__article {
+  margin: 0 2rem;
+}
+.parcours__article-figure img {
+  height: 25rem;
+  max-width: 60rem;
+}
+
+// INMANQUABLE--------------------------------------------------------------------------------------------
 
 .inmanquable__section-container {
-    margin: 4rem $margin-row-general;
+  margin: 4rem $margin-row-general;
 }
+
 .inmanquable__section-box {
-    @include grid-column-autofit(12rem, 1fr, 6vw, 2rem);
-    // Parameters: min, max (in minmax()), column gap, row gap
+  @include grid-column-repeat(4, $home-grid-min, 1fr, 4rem, 1rem) {
+    margin-inline: 2rem;
   }
+}
+
+.home-inmanquable__h2 {
+  margin: 4rem 3rem;
+}
