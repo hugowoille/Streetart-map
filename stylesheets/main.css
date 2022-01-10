@@ -709,6 +709,16 @@ li .navbar__links {
   color: #ECDBBA;
 }
 
+.artistes__section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+}
+
 /**
  * Carousel.sass
  * @author: Dang Van Thanh
