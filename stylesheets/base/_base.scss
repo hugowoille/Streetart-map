@@ -33,14 +33,29 @@ a {
     text-decoration: underline;
   }
 }
-body {
-  font-size: 16px;
-}
 
-ul, li, p, h1, h2, h3, img, figure, article, section, main, header, nav, footer, a, body, html {
+// ---------------------------------------------------------------------------
+
+ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, footer, a, body, html {
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-decoration: none;
   color: unset;
+}
+
+// ---------------------------------------------------------------------------
+
+.img__general-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h2__general {
+  font-size: $h2-general-fontsize;
+}
+
+body {
+  background-color: $background-color;
 }

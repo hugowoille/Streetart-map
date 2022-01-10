@@ -32,3 +32,12 @@
   }
 }
 
+// ---------------------------------------------------------------------------
+
+@mixin grid-column-autofit($min, $max, $column-gap: 1rem, $row-gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, $max));
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @content;
+}
