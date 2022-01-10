@@ -537,15 +537,13 @@ li .navbar__links {
 }
 
 .artistes__article a {
-  display: inline-block;
-  position: relative;
   text-align: center;
+  color: #ECDBBA;
 }
 
 .artistes__article-button {
-  text-transform: uppercase;
   display: inline-block;
-  position: relative;
+  text-transform: uppercase;
   padding: 0.8em 2.8em;
   border: none;
   border-radius: 0.5em;
@@ -704,6 +702,11 @@ li .navbar__links {
 
 .home-inmanquable__h2 {
   margin: 4rem 3rem;
+}
+
+.artistes__article {
+  font-family: "Raleway", sans-serif;
+  color: #ECDBBA;
 }
 
 /**
