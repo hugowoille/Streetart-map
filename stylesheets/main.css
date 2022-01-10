@@ -534,44 +534,30 @@ li .navbar__links {
   font-size: 1.5em;
 }
 
-.mmap__responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.map__responsive iframe {
-  left: 0;
-  top: 0;
-  height: 40vw;
-  width: 100%;
-}
-
-.oeuvres__section-container {
+.oeuvres__global-container {
   margin: 2rem auto 5rem auto;
   max-width: 75rem;
 }
 
 @media screen and (max-width: 1140px) {
-  .oeuvres__section-container {
+  .oeuvres__global-container {
     max-width: 55rem;
   }
 }
 
 @media screen and (max-width: 820px) {
-  .oeuvres__section-container {
+  .oeuvres__global-container {
     max-width: 50rem;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .oeuvres__section-container {
+  .oeuvres__global-container {
     max-width: 40rem;
   }
 }
 
-.oeuvres__section__box {
+.oeuvres__global-container .oeuvres__box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(220px, 1fr))[4];
@@ -583,7 +569,7 @@ li .navbar__links {
 }
 
 @media screen and (max-width: 1140px) {
-  .oeuvres__section__box {
+  .oeuvres__global-container .oeuvres__box-container {
     -ms-grid-columns: (minmax(220px, 1fr))[3];
         grid-template-columns: repeat(3, minmax(220px, 1fr));
     -webkit-column-gap: 3rem;
@@ -592,7 +578,7 @@ li .navbar__links {
 }
 
 @media screen and (max-width: 820px) {
-  .oeuvres__section__box {
+  .oeuvres__global-container .oeuvres__box-container {
     -ms-grid-columns: (minmax(220px, 1fr))[2];
         grid-template-columns: repeat(2, minmax(220px, 1fr));
     -webkit-column-gap: 2.5rem;
@@ -601,42 +587,42 @@ li .navbar__links {
 }
 
 @media screen and (max-width: 620px) {
-  .oeuvres__section__box {
+  .oeuvres__global-container .oeuvres__box-container {
     -ms-grid-columns: (minmax(220px, 1fr))[1];
         grid-template-columns: repeat(1, minmax(220px, 1fr));
   }
 }
 
-.oeuvres__section-article {
+.oeuvres__article {
   -webkit-box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445);
           box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445);
   aspect-ratio: 1 / 1.2;
 }
 
 @media screen and (max-width: 820px) {
-  .oeuvres__section-article {
+  .oeuvres__article {
     aspect-ratio: 1 / 0.7;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .oeuvres__section-article {
+  .oeuvres__article {
     aspect-ratio: 1 / 0.55;
   }
 }
 
-.oeuvres__section-article-figure-img {
+.oeuvres__article .oeuvres__article-figure-img {
   aspect-ratio: 1 / 1;
 }
 
 @media screen and (max-width: 820px) {
-  .oeuvres__section-article-figure-img {
+  .oeuvres__article .oeuvres__article-figure-img {
     aspect-ratio: 1 / 0.7;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .oeuvres__section-article-figure-img {
+  .oeuvres__article .oeuvres__article-figure-img {
     aspect-ratio: 1 / 0.55;
   }
 }
@@ -645,15 +631,21 @@ li .navbar__links {
   margin: 4rem 3rem;
 }
 
-.oeuvres__section-article-textcontainer {
+.oeuvres__article-text {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1rem 0;
 }
 
-.parcours__container {
+.parcours__global-container {
+  margin: 2rem auto 5rem auto;
+  max-width: 70rem;
+}
+
+.parcours__flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,8 +656,17 @@ li .navbar__links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10rem 0;
-  row-gap: 5rem;
+  margin: 10rem auto;
+  row-gap: 3rem;
+}
+
+.parcours__article {
+  margin: 0 2rem;
+}
+
+.parcours__article-figure img {
+  height: 25rem;
+  max-width: 60rem;
 }
 
 .inmanquable__section-container {
@@ -675,10 +676,15 @@ li .navbar__links {
 .inmanquable__section-box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  -webkit-column-gap: 6vw;
-          column-gap: 6vw;
-  row-gap: 2rem;
+  -ms-grid-columns: (minmax(220px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+  margin-inline: 2rem;
+}
+
+.home-inmanquable__h2 {
+  margin: 4rem 3rem;
 }
 /*# sourceMappingURL=main.css.map */
