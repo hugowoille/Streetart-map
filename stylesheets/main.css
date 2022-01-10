@@ -528,6 +528,22 @@ li {
   margin: 0.1vw;
 }
 
+.artistes__article a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.artistes__article-button {
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding: 0.8em 2.8em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #272a2c;
+}
+
 .mmap__responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
