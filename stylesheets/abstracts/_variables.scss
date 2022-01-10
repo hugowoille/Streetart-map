@@ -55,6 +55,13 @@ $base-url: '/assets/' !default;
 
 // general
 $h2-general-fontsize: 2em;
+$background-color: #563A36;
+$body-text-color: #ECDBBA;
+
+// footer and navbar
+
+$navbar-footer-bg-color: #292B29;
+$navbar-footer-font-color: #8E635B;
 
 // Font
 
@@ -62,10 +69,7 @@ $font-molot: 'Molot', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 
 // Navbar
-$navbar-logo-size: 8rem;
-$navbar-background-color: #292B29;
-$navbar-logo-color: #8E635B;
-$navbar-font-color: #ada188;
+$navbar-logo-size: 7rem;
 $navbar-text-fontsize: 1.5em;
 $navbar-li-padding: 1rem 0;
 $navbar-li-margin: 0.1vw;
@@ -73,7 +77,6 @@ $navbar-li-margin: 0.1vw;
 // Footer 
 $social-media-size: 1.8em;
 $footer-copyright-margin: 0;
-$footer-background-color: rgb(233, 233, 233);
 
 // Margin
 $margin-row-general: 18vw;
