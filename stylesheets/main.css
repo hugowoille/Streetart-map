@@ -787,223 +787,274 @@ li .navbar__links {
   text-align: center;
 }
 
-/**
- * Carousel.sass
- * @author: Dang Van Thanh
- * @github: https://github.com/dangvanthanh/carousel.sass
- * @description: A Simple Carousel Pure CSS Using Sass
- * @version: 1.0.0
- */
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5), .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next > label:nth-child(1) {
-  opacity: 1 !important;
-  z-index: 3;
+.categorie_body h2 {
+  font-family: "Molot", sans-serif;
+  text-align: center;
+  margin: 2vh 0vh 2vh 0;
+  font-size: 2vw;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+.categorie_body h3 {
+  text-align: center;
+  font-family: "Molot", sans-serif;
+  font-size: 1.5vw;
 }
 
-body {
-  margin: 0;
-}
-
-.container {
-  width: 900px;
-  min-width: 900px;
-  margin: 50px auto;
-}
-
-.carousel {
-  width: 100%;
+.carousel__fresque ul.slides {
+  display: block;
   position: relative;
-  overflow: hidden;
-}
-
-.carousel > input[type="radio"] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  top: 0;
-}
-
-.carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item,
-.carousel > input[type="radio"]:checked ~ .carousel__prev > label,
-.carousel > input[type="radio"]:checked ~ .carousel__next > label {
-  opacity: 0;
-}
-
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
-  opacity: 1;
-}
-
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
-  opacity: 1;
-}
-
-.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
-  opacity: 1;
-}
-
-.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
-  opacity: 1;
-}
-
-.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
-  opacity: 1;
-}
-
-.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-}
-
-.carousel__items {
+  height: 600px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  width: 100%;
-  height: 600px;
-  position: relative;
+  overflow: hidden;
+  list-style: none;
+  background-color: #292B29;
 }
 
-.carousel__item {
+.carousel__fresque .slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.carousel__fresque ul.slides input {
+  display: none;
+}
+
+.carousel__fresque .slide-container {
+  display: block;
+}
+
+.carousel__fresque .slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+
+.carousel__fresque .slide-image img {
+  width: auto;
+  height: 100%;
+}
+
+.carousel__fresque .carousel-controls {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel__fresque .carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.carousel__fresque .slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel__fresque .carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel__fresque .carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel__fresque .carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel__fresque .carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel__fresque .carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+.carousel__fresque input:checked + .slide-container .slide-image {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel__fresque input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+.carousel__fresque input#img-1:checked ~ .carousel-dots label#img-dot-1,
+.carousel__fresque input#img-2:checked ~ .carousel-dots label#img-dot-2,
+.carousel__fresque input#img-3:checked ~ .carousel-dots label#img-dot-3,
+.carousel__fresque input#img-4:checked ~ .carousel-dots label#img-dot-4,
+.carousel__fresque input#img-5:checked ~ .carousel-dots label#img-dot-5,
+.carousel__fresque input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+.carousel__fresque input:checked + .slide-container .nav label {
+  display: block;
+}
+
+.carousel__graffiti ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background-color: #292B29;
+}
+
+.carousel__graffiti .slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.carousel__graffiti ul.slides input {
+  display: none;
+}
+
+.carousel__graffiti .slide-container {
+  display: block;
+}
+
+.carousel__graffiti .slide-image {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  transition: opacity 2s;
-  -webkit-transition: opacity 2s;
-}
-
-.carousel__item img {
-  width: 100%;
-  vertical-align: middle;
-}
-
-.carousel__prev > label, .carousel__next > label {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
+  top: 0;
   opacity: 0;
-  z-index: 2;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 
-.carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
-  opacity: .5 !important;
+.carousel__graffiti .slide-image img {
+  width: auto;
+  height: 100%;
 }
 
-.carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
-  content: "";
+.carousel__graffiti .carousel-controls {
   position: absolute;
-  width: inherit;
-  height: inherit;
-}
-
-.carousel__prev > label:before, .carousel__next > label:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(10%, #fff), color-stop(10%, rgba(51, 51, 51, 0))), -webkit-gradient(linear, right top, left top, from(#fff), color-stop(10%, #fff), color-stop(10%, rgba(51, 51, 51, 0)));
-  background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
-  width: 60%;
-  height: 60%;
-  top: 20%;
-}
-
-.carousel__prev > label {
-  left: 2%;
-}
-
-.carousel__prev > label:before {
-  left: 35%;
-  top: 20%;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-.carousel__next > label {
-  right: 2%;
-}
-
-.carousel__next > label:before {
-  left: 10%;
-  transform: rotate(315deg);
-  -webkit-transform: rotate(315deg);
-}
-
-.carousel__nav {
-  position: absolute;
-  bottom: 3%;
+  top: 0;
   left: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 3;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
 }
 
-.carousel__nav > label {
-  border: 1px solid #fff;
-  display: inline-block;
-  border-radius: 50%;
+.carousel__graffiti .carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
   cursor: pointer;
-  margin: 0 .125%;
-  width: 20px;
-  height: 20px;
 }
 
-#imgzer4 {
-  top: -400px;
+.carousel__graffiti .slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
 }
 
-#imgzer3 {
-  top: -500px;
+.carousel__graffiti .carousel-controls label:hover {
+  opacity: 1;
 }
 
-#imgzer5 {
-  top: -500px;
+.carousel__graffiti .carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
 }
 
-#imgzer1 {
-  top: -100px;
+.carousel__graffiti .carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
 }
 
-#imgzer2 {
-  top: -200px;
+.carousel__graffiti .carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel__graffiti .carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+.carousel__graffiti input:checked + .slide-container .slide-image {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel__graffiti input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+.carousel__graffiti input#img1-2:checked ~ .carousel-dots label#img-dot-1-2,
+.carousel__graffiti input#img2-2:checked ~ .carousel-dots label#img-dot-2-2,
+.carousel__graffiti input#img3-2:checked ~ .carousel-dots label#img-dot-3-2,
+.carousel__graffiti input#img4-2:checked ~ .carousel-dots label#img-dot-4-2,
+.carousel__graffiti input#img5-2:checked ~ .carousel-dots label#img-dot-5-2,
+.carousel__graffiti input#img6-2:checked ~ .carousel-dots label#img-dot-6-2 {
+  opacity: 1;
+}
+
+.carousel__graffiti input:checked + .slide-container .nav label {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="categorie_body">
   <!--Navbar-->
   <nav>
     <ul class="navbar__buttons">
@@ -35,58 +35,224 @@
         </a>
       </li>
       <li><a href="categories.html" class="navbar__links">Catégories</a></li>
-      <li><a href="artistes.html" class="navbar__links">Artistes</a></li>
+      <li><a href="artiste.html" class="navbar__links">Artistes</a></li>
       <li><a href="blog.html " class="navbar__links">Blog</a></li>
     </ul>
   </nav>
 
-<h1>
+  <h2 class="h2__general">
     Categories
-</h1>
+  </h2>
 
-<h2>Fresque</h2>
+  <h3>Fresque</h3>
+  <!-- CAROUSEL FRESQUE-->
 
-<div class="container">
-    <div class="carousel">
-      <input type="radio" id="carousel-1" name="carousel[]" checked>
-      <input type="radio" id="carousel-2" name="carousel[]">
-       <input type="radio" id="carousel-3" name="carousel[]">
-      <input type="radio" id="carousel-4" name="carousel[]">
-      <input type="radio" id="carousel-5" name="carousel[]">
-      <ul class="carousel__items">
-        <li class="carousel__item" id="imgzer1"><img src="https://zupimages.net/up/22/02/dkvi.jpg" alt=""></li>
-        <li class="carousel__item" id="imgzer2"><img src="https://zupimages.net/up/22/02/1t5z.jpg" alt=""></li>
-        <li class="carousel__item" id="imgzer3"><img src="https://zupimages.net/up/22/02/i53c.jpg" alt=""></li>
-        <li class="carousel__item" id="imgzer4"><img src="https://zupimages.net/up/22/02/l7cm.jpg" alt=""></li>
-        <li class="carousel__item" id="imgzer5"><img src="https://zupimages.net/up/22/02/izot.jpg" alt=""></li>
+  <div>
+    <div class="carousel__fresque">
+      <ul class="slides">
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200531_180855-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-6" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200531_184200-1-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-1" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-3" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-3" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200725_183843-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-4" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-4" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200726_131133-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-5" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-5" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_2360.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-4" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-6" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-6" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_2362.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-5" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-1" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+          <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+          <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
+          <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
+        </div>
       </ul>
-       <div class="carousel__prev">
-        <label for="carousel-1"></label>
-        <label for="carousel-2"></label>
-        <label for="carousel-3"></label>
-        <label for="carousel-4"></label>
-        <label for="carousel-5"></label>
-       </div>
-       <div class="carousel__next">
-         <label for="carousel-1"></label>
-         <label for="carousel-2"></label>
-         <label for="carousel-3"></label>
-         <label for="carousel-4"></label>
-         <label for="carousel-5"></label>
-       </div>
-       <div class="carousel__nav">
-         <label for="carousel-1"></label>
-         <label for="carousel-2"></label>
-         <label for="carousel-3"></label>
-         <label for="carousel-4"></label>
-         <label for="carousel-5"></label>
-       </div>
-     </div>
-   </div>
-<h2>Graffiti</h2>
-<h2>Pochoir</h2>
+    </div>
+  </div>
+
+  <h3>Graffiti</h3>
 
 
+  <!-- CAROUSEL GRAFFITI-->
+
+
+  <div>
+    <div class="carousel__graffiti">
+      <ul class="slides">
+        <input type="radio" name="radio-buttons-2" id="img1-2" checked />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200531_180855-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img3-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img2-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons-2" id="img2-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200531_184200-1-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img1-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img3-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons-2" id="img3-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200725_183843-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img2-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img4-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons-2" id="img4-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_20200726_131133-scaled.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img3-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img5-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons-2" id="img5-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_2360.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img4-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img6-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons-2" id="img6-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="img/categories/fresque/IMG_2362.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img5-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img1-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img1-2" class="carousel-dot" id="img-dot-1-2"></label>
+          <label for="img2-2" class="carousel-dot" id="img-dot-2-2"></label>
+          <label for="img3-2" class="carousel-dot" id="img-dot-3-2"></label>
+          <label for="img4-2" class="carousel-dot" id="img-dot-4-2"></label>
+          <label for="img5-2" class="carousel-dot" id="img-dot-5-2"></label>
+          <label for="img6-2" class="carousel-dot" id="img-dot-6-2"></label>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <h3>Pochoir</h3>
+
+  -->
 
 
   <footer>
