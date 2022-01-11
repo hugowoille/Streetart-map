@@ -826,7 +826,7 @@ li .navbar__links {
 }
 
 .artistes__figure {
-  margin: 1.9em;
+  margin: 2em;
 }
 
 .artistes__article {
@@ -841,8 +841,10 @@ li .navbar__links {
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
+
   -ms-grid-columns: (minmax(220px, 1.5fr))[2];
       grid-template-columns: repeat(2, minmax(220px, 1.5fr));
+
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
