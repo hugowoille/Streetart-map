@@ -58,6 +58,12 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
 .h2__general {
   font-family: $font-molot;
   font-size: $h2-general-fontsize;
+  letter-spacing: $molot-letter-spacing;letter-spacing: $molot-letter-spacing;
+}
+
+.h3__general {
+  font-family: $font-molot;
+  font-size: $h3-general-fontsize;
   letter-spacing: $molot-letter-spacing;
 }
 

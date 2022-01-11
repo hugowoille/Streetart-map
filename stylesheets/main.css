@@ -395,6 +395,13 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
   font-family: "Molot", sans-serif;
   font-size: 2.5em;
   letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.h3__general {
+  font-family: "Molot", sans-serif;
+  font-size: 1.8em;
+  letter-spacing: 0.5px;
 }
 
 .h4__general-style {
@@ -554,15 +561,13 @@ li .navbar__links {
 }
 
 .artistes__article a {
-  display: inline-block;
-  position: relative;
   text-align: center;
+  color: #ECDBBA;
 }
 
 .artistes__article-button {
-  text-transform: uppercase;
   display: inline-block;
-  position: relative;
+  text-transform: uppercase;
   padding: 0.8em 2.8em;
   border: none;
   border-radius: 0.5em;
@@ -791,6 +796,7 @@ li .navbar__links {
   text-align: center;
 }
 
+
 .figure-general {
   overflow: hidden;
 }
@@ -803,6 +809,47 @@ li .navbar__links {
 .article-hover-general img:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+
+.h2__artistes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 3rem;
+}
+
+.h3__artistes-article {
+  margin-bottom: 0.3em;
+}
+
+.artistes__figure {
+  margin: 2em;
+}
+
+.artistes__article {
+  font-family: "Raleway", sans-serif;
+  margin: 2em;
+}
+
+.artistes__article p {
+  margin-bottom: 2em;
+}
+
+.artistes__section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 55em))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 55em));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+}
+
+.span__artistes {
+  font-weight: 500;
+  font-style: italic;
 }
 
 /**
