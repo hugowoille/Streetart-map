@@ -822,11 +822,16 @@ li .navbar__links {
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(220px, 55em))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(220px, 55em));
+  -ms-grid-columns: (minmax(220px, 55em))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 55em));
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
+}
+
+.span__artistes {
+  font-weight: 500;
+  font-style: italic;
 }
 
 /**

@@ -22,9 +22,13 @@
 }
 
 .artistes__section-container {
-    @include grid-column-repeat(auto-fill, 220px, 55em, 4rem, 1rem)
+    @include grid-column-repeat(auto-fit, 220px, 55em, 4rem, 1rem)
 }
 
+.span__artistes {
+    font-weight: 500;
+    font-style: italic;
+}
 
 
 
