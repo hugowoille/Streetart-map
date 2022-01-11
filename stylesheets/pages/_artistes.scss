@@ -1,0 +1,36 @@
+.h2__artistes {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 3rem;
+}
+
+.h3__artistes-article {
+    margin-bottom: 0.3em;
+}
+
+.artistes__figure {
+    margin: 2em;
+}
+
+.artistes__article {
+    font-family: $font-raleway;
+ //   color: $body-text-color;
+    margin: 2em;
+    p {
+        margin-bottom: 2em;
+    }
+}
+
+.artistes__section-container {
+    @include grid-column-repeat(auto-fit, 220px, 55em, 4rem, 1rem)
+}
+
+.span__artistes {
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+
+
+
