@@ -75,7 +75,10 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
 .p__general-style {
   font-family: $font-raleway;
   font-size: 1.3em;
+}
 
+a:link {
+  text-decoration: none;
 }
 
 
