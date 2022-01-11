@@ -527,6 +527,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 
 ul {
@@ -796,19 +797,19 @@ li .navbar__links {
   text-align: center;
 }
 
-
 .figure-general {
   overflow: hidden;
 }
 
 .img__general-style {
-  -webkit-transition: 1.4s ease-in-out;
-  transition: 1.4s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .article-hover-general img:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .h2__artistes {
   display: -webkit-box;
@@ -825,7 +826,7 @@ li .navbar__links {
 }
 
 .artistes__figure {
-  margin: 2em;
+  margin: 1.9em;
 }
 
 .artistes__article {
@@ -840,8 +841,8 @@ li .navbar__links {
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(220px, 55em))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(220px, 55em));
+  -ms-grid-columns: (minmax(220px, 1.5fr))[2];
+      grid-template-columns: repeat(2, minmax(220px, 1.5fr));
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
@@ -850,6 +851,11 @@ li .navbar__links {
 .span__artistes {
   font-weight: 500;
   font-style: italic;
+}
+
+.artistes__container {
+  margin: 0 auto;
+  max-width: 60rem;
 }
 
 /**
