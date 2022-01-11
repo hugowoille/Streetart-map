@@ -9,8 +9,8 @@
 }
 
 .artistes__figure {
+// aspect-ratio: 2.5 / 2.1;
     margin: 1.9em;
-    
 }
 
 .artistes__article {
@@ -22,8 +22,12 @@
     }
 }
 
+.artistes__figure, .artistes__article {
+    box-sizing: border-box;
+}
+
 .artistes__section-container {
-    @include grid-column-repeat(2, 220px, 1.5fr, 4rem, 1rem)
+    @include grid-column-repeat(2, 220px, 2fr, 4rem, 1rem)
 }
 
 .span__artistes {

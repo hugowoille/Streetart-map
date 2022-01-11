@@ -564,6 +564,8 @@ li .navbar__links {
 .artistes__article a {
   text-align: center;
   color: #ECDBBA;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
 }
 
 .artistes__article-button {
@@ -838,11 +840,16 @@ li .navbar__links {
   margin-bottom: 2em;
 }
 
+.artistes__figure, .artistes__article {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(220px, 1.5fr))[2];
-      grid-template-columns: repeat(2, minmax(220px, 1.5fr));
+  -ms-grid-columns: (minmax(220px, 2fr))[2];
+      grid-template-columns: repeat(2, minmax(220px, 2fr));
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
