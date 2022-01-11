@@ -704,16 +704,33 @@ li .navbar__links {
   margin: 4rem 3rem;
 }
 
+.h2__artistes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 3rem;
+}
+
+.artistes__figure {
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
 .artistes__article {
   font-family: "Raleway", sans-serif;
   color: #ECDBBA;
+  margin-left: 2em;
+  margin-right: 1em;
 }
 
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
