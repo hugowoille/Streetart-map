@@ -803,14 +803,12 @@ li .navbar__links {
 }
 
 .artistes__figure {
-  margin-left: 2em;
-  margin-right: 1em;
+  margin: 2em;
 }
 
 .artistes__article {
   font-family: "Raleway", sans-serif;
-  margin-left: 2em;
-  margin-right: 1em;
+  margin: 2em;
 }
 
 .artistes__section-container {
