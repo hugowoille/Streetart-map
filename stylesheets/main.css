@@ -563,9 +563,6 @@ li .navbar__links {
 
 .artistes__article a {
   text-align: center;
-  color: #ECDBBA;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
 }
 
 .artistes__article-button {
