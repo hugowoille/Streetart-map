@@ -520,6 +520,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 
 ul {
@@ -796,13 +797,13 @@ li .navbar__links {
 }
 
 .img__general-style {
-  -webkit-transition: 1.4s ease-in-out;
-  transition: 1.4s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .article-hover-general img:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /**
