@@ -841,8 +841,10 @@ li .navbar__links {
 .artistes__section-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(220px, 55em))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(220px, 55em));
+
+  -ms-grid-columns: (minmax(220px, 1.5fr))[2];
+      grid-template-columns: repeat(2, minmax(220px, 1.5fr));
+
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 1rem;
@@ -851,6 +853,11 @@ li .navbar__links {
 .span__artistes {
   font-weight: 500;
   font-style: italic;
+}
+
+.artistes__container {
+  margin: 0 auto;
+  max-width: 60rem;
 }
 
 /**
