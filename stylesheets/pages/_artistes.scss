@@ -15,7 +15,7 @@
 }
 
 .artistes__section-container {
-    @include grid-column-repeat(auto-fit, 400px, 1fr, 4rem, 1rem)
+    @include grid-column-repeat(auto-fill, 220px, 55em, 4rem, 1rem)
 }
 
 
