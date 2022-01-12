@@ -572,6 +572,19 @@ li .navbar__links {
 .artistes__article a {
   text-align: center;
   color: #ECDBBA;
+  margin: 0.3em;
+}
+
+.artistes__article a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 450px) {
+  .artistes__article a {
+    padding: 0.6em 2.6em;
+    font-size: smaller;
+  }
 }
 
 .artistes__article-button {
@@ -837,6 +850,11 @@ li .navbar__links {
   margin: 1.9em;
 }
 
+.img__artistes-figure {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .artistes__article {
   font-family: "Raleway", sans-serif;
   margin: 2em;
@@ -861,6 +879,13 @@ li .navbar__links {
   row-gap: 1rem;
 }
 
+@media screen and (max-width: 550px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
 .span__artistes {
   font-weight: 500;
   font-style: italic;
@@ -868,7 +893,7 @@ li .navbar__links {
 
 .artistes__container {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 70rem;
 }
 
 /**

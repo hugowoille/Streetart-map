@@ -11,7 +11,15 @@
 .artistes__figure {
 // aspect-ratio: 2.5 / 2.1;
     margin: 1.9em;
+//   img:hover {
+//      transform: scale(1.1);
+//   }
 }
+
+.img__artistes-figure {
+    object-fit: cover;
+}
+
 
 .artistes__article {
     font-family: $font-raleway;
@@ -27,8 +35,11 @@
 }
 
 .artistes__section-container {
-    @include grid-column-repeat(2, 220px, 2fr, 4rem, 1rem)
-}
+    @include grid-column-repeat(2, 220px, 2fr, 4rem, 1rem);
+    @media screen and (max-width: 550px) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+      }
+  }
 
 .span__artistes {
     font-weight: 500;
@@ -37,7 +48,7 @@
 
 .artistes__container {
     margin: 0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
 }
 
 
