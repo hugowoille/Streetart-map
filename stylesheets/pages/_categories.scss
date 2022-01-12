@@ -13,19 +13,40 @@
     
   }
   h3{
-    text-align: center;
+    margin-left: 10vw;
     font-family: $font-molot;
     font-size: 1.5vw;
+    font-weight:900;
+    display: block;
+    width: 30vw;
+    text-decoration: none;
+    margin-bottom: 5px;
   }
+   h3:first-letter{
+     font-weight:900;
+     font-size: 3rem;
+  }
+ 
+  // h3:after{
+  //   content:"";
+  //   background-color:#292B29 ;
+  //   width: 200px;
+  //   height: 5px;
+  //   display:block;
+  //   position:relative;
+  //   top:-10px;
+  // }
 }
 
+
+// CAROUSEL FRESQUES
 
 .carousel__fresque{
 
  ul.slides {
   display: block;
   position: relative;
-  height: 600px;
+  height: 700px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -40,6 +61,7 @@
   -khtml-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+  text-align: center;
 }
 
 ul.slides input {
@@ -111,7 +133,7 @@ ul.slides input {
   left: 0;
   right: 0;
   bottom: 20px;
-  z-index: 999;
+  z-index: 0;
   text-align: center;
 
 }
@@ -152,7 +174,7 @@ input:checked + .slide-container .nav label { display: block; };
   ul.slides {
     display: block;
     position: relative;
-    height: 600px;
+    height: 730px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -167,6 +189,7 @@ input:checked + .slide-container .nav label { display: block; };
     -khtml-user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+    text-align: center;
   }
   
   ul.slides input {

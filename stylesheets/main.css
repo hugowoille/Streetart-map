@@ -544,21 +544,33 @@ ul {
   background-color: #292B29;
 }
 
-li {
+.li_navbar {
   list-style-type: none;
   text-align: center;
   font-size: 1.5em;
   color: #8E635B;
   padding: 1rem 0;
   margin: 0.1vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ECDBBA), color-stop(10%, #ECDBBA), color-stop(10.01%, transparent)) no-repeat top/0 100%;
+  background: linear-gradient(to top, #ECDBBA 0%, #ECDBBA 10%, transparent 10.01%) no-repeat top/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
 }
 
-li .navbar__links {
+.li_navbar:nth-child(4) {
+  background: none;
+}
+
+.li_navbar .navbar__links {
   text-decoration: none;
   font-family: "Molot", sans-serif;
   color: #ECDBBA;
   font-size: 1.6em;
   letter-spacing: 0.5px;
+}
+
+li:hover {
+  background-size: 100% 100%;
 }
 
 .artistes__article a {
@@ -797,13 +809,6 @@ li .navbar__links {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.categorie_body h2 {
-  font-family: "Molot", sans-serif;
-  text-align: center;
-  margin: 2vh 0vh 2vh 0;
-  font-size: 2vw;
-=======
 .figure-general {
   overflow: hidden;
 }
@@ -870,29 +875,33 @@ li .navbar__links {
   max-width: 60rem;
 }
 
-/**
- * Carousel.sass
- * @author: Dang Van Thanh
- * @github: https://github.com/dangvanthanh/carousel.sass
- * @description: A Simple Carousel Pure CSS Using Sass
- * @version: 1.0.0
- */
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5), .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next > label:nth-child(1) {
-  opacity: 1 !important;
-  z-index: 3;
->>>>>>> 64e6768144c26cf0b0f0f84f464911804fe4efb4
+.categorie_body h2 {
+  font-family: "Molot", sans-serif;
+  text-align: center;
+  margin: 2vh 0vh 2vh 0;
+  font-size: 2vw;
 }
 
 .categorie_body h3 {
-  text-align: center;
+  margin-left: 10vw;
   font-family: "Molot", sans-serif;
   font-size: 1.5vw;
+  font-weight: 900;
+  display: block;
+  width: 30vw;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.categorie_body h3:first-letter {
+  font-weight: 900;
+  font-size: 3rem;
 }
 
 .carousel__fresque ul.slides {
   display: block;
   position: relative;
-  height: 600px;
+  height: 700px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -907,6 +916,7 @@ li .navbar__links {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+  text-align: center;
 }
 
 .carousel__fresque ul.slides input {
@@ -979,7 +989,7 @@ li .navbar__links {
   left: 0;
   right: 0;
   bottom: 20px;
-  z-index: 999;
+  z-index: 0;
   text-align: center;
 }
 
@@ -1021,7 +1031,7 @@ li .navbar__links {
 .carousel__graffiti ul.slides {
   display: block;
   position: relative;
-  height: 600px;
+  height: 730px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -1036,6 +1046,7 @@ li .navbar__links {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
+  text-align: center;
 }
 
 .carousel__graffiti ul.slides input {
