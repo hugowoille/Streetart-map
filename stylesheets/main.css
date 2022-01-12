@@ -903,6 +903,13 @@ li .navbar__links {
   row-gap: 1rem;
 }
 
+@media screen and (max-width: 830px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
 @media screen and (max-width: 550px) {
   .artistes__section-container {
     -ms-grid-columns: (minmax(200px, 1fr))[1];
