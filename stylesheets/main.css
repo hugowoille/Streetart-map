@@ -384,6 +384,10 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
   color: unset;
 }
 
+body {
+  background-color: #ebe6df;
+}
+
 .img__general-style {
   width: 100%;
   height: 100%;
