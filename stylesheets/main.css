@@ -352,7 +352,32 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
   font-family: "Molot", sans-serif;
   font-size: 2.5em;
   letter-spacing: 0.5px;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  max-width: 25%;
+}
+
+.h2__general .h2__general::first-letter {
+  font-weight: 900;
+  font-size: 3rem;
+  vertical-align: -0.4rem;
+}
+
+.h2__general::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  left: 0;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 5px;
+}
+
   letter-spacing: 0.5px; }
+
 
 .h3__general {
   font-family: "Molot", sans-serif;
@@ -444,11 +469,26 @@ body {
 
 footer {
   display: flex;
+
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #292b29;
+  color: #8e635b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
   justify-content: center;
   justify-content: space-between;
   background-color: #292B29;
   color: #8E635B;
   align-items: center; }
+
 
 .footer__socialmedia {
   margin-left: 1em;
@@ -466,14 +506,36 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
+  background-color: #292b29;
+}
+
   background-color: #292B29; }
+
 
 li {
   list-style-type: none;
   text-align: center;
   font-size: 1.5em;
-  color: #8E635B;
+  color: #8e635b;
   padding: 1rem 0;
+
+  margin: 0 0.5rem;
+}
+
+li .navbar__links {
+  text-decoration: none;
+  font-family: "Molot", sans-serif;
+  color: #ecdbba;
+  font-size: 1.6em;
+  letter-spacing: 0.5px;
+}
+
+.artistes__article a {
+  text-align: center;
+  color: #ecdbba;
+}
+
   margin: 0.1vw; }
   li .navbar__links {
     text-decoration: none;
@@ -486,6 +548,7 @@ li {
   text-align: center;
   color: #ECDBBA; }
 
+
 .artistes__article-button {
   display: inline-block;
   text-transform: uppercase;
@@ -493,6 +556,27 @@ li {
   border: none;
   border-radius: 0.5em;
   background-color: #272a2c; }
+
+.article-text-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.article-text-container h2 {
+  text-align: center;
+}
+
+.article-text-container p {
+  text-align: center;
+}
+
+.home__h2 {
+  margin: 4rem auto;
+}
 
 .oeuvres__global-container {
   margin: 2rem auto 5rem auto;
@@ -525,7 +609,19 @@ li {
         grid-template-columns: repeat(1, minmax(220px, 1fr)); } }
 
 .oeuvres__article {
+
+  -webkit-box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+          box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+}
+
+.oeuvres__article .oeuvres__article-figure-img {
+  aspect-ratio: 1 / 0.9;
+}
+
+@media screen and (max-width: 820px) {
+
   box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445); }
+
   .oeuvres__article .oeuvres__article-figure-img {
     aspect-ratio: 1 / 0.9; }
     @media screen and (max-width: 820px) {
@@ -534,6 +630,8 @@ li {
     @media screen and (max-width: 620px) {
       .oeuvres__article .oeuvres__article-figure-img {
         aspect-ratio: 1 / 0.55; } }
+
+
 
 .home-oeuvre__h2 {
   margin: 4rem 3rem; }
@@ -547,6 +645,7 @@ li {
   .oeuvres__article-text-container p {
     text-align: center; }
 
+
 .parcours__flex-container {
   display: flex;
   flex-direction: column;
@@ -556,10 +655,21 @@ li {
 
 .parcours__article {
   margin: 0 2rem;
+
+  -webkit-box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+          box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+}
+
+.parcours__article p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
   box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445); }
   .parcours__article p {
     text-align: center;
     margin: 1rem 0; }
+
 
 .parcours__article-figure {
   height: 25rem;
@@ -591,11 +701,18 @@ li {
     .inmanquable__section-box {
       margin-inline: 2rem; } }
 
+
+.inmanquable__article {
+  -webkit-box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+          box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445), -1px 0 10px rgba(138, 134, 134, 0.445);
+}
+
 .home-inmanquable__h2 {
   margin: 4rem 3rem; }
 
 .inmanquable__article {
   box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445), -1px 0 10px rgba(206, 206, 206, 0.445); }
+
 
 .inmanquable__article-figure-img {
   aspect-ratio: 1.1 / 1; }
@@ -606,6 +723,28 @@ li {
     .inmanquable__article-figure-img {
       aspect-ratio: 1.5 / 0.6; } }
 
+
+.article-hover-general:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.article-hover-general:hover .article-text-container h4 {
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.article-hover-general:hover .article-text-container > p {
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.article-hover-general:hover .button-middle {
+  opacity: 1;
+}
+
 .inmanquable__article-text-container {
   display: grid;
   justify-content: center;
@@ -615,10 +754,51 @@ li {
   .inmanquable__article-text-container p {
     text-align: center; }
 
+
 .figure-general {
   overflow: hidden; }
 
 .img__general-style {
+
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.article-text-container {
+  opacity: 1;
+  position: relative;
+}
+
+.article-text-container h4 {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.article-text-container > p {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.button-middle {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #c26464;
+  padding: 0.9rem 1.4rem;
+  border-radius: 0.2rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
   transition: 1s ease-in-out; }
 
 .article-hover-general img:hover {
@@ -633,6 +813,7 @@ li {
     width: 100%; }
   .blogMain h1 {
     margin-left: 2rem; }
+
 
 .h2__artistes {
   display: flex;
