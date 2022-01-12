@@ -12,15 +12,18 @@ nav {
     gap: 3rem;
     background-color: $navbar-footer-bg-color;
   }
-
-  li {
+  .li_navbar {
     list-style-type: none;
     text-align: center;
     font-size: $navbar-text-fontsize;
     color: $navbar-footer-font-color;
     padding: $navbar-li-padding;
     margin: $navbar-li-margin;
-
+    background: linear-gradient(to top, $body-text-color 0%, $body-text-color 10%, transparent 10.01%) no-repeat top  / 0 100%;
+    transition: background-size .5s;
+    &:nth-child(4){
+      background: none;
+    }
     .navbar__links {
       text-decoration: none;
       font-family: $font-molot;
@@ -29,4 +32,8 @@ nav {
       letter-spacing: $molot-letter-spacing;
     }
   }
+  li:hover{
+    background-size: 100% 100%;
+  }
+
 
