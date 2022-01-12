@@ -37,7 +37,7 @@ $home-media3: 620px;
 
 .oeuvres__global-container {
   margin: 2rem auto 5rem auto;
-  max-width: 75rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
+  max-width: 80rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
   @media screen and (max-width: $home-media1) {
     max-width: 55rem;
   }
@@ -70,16 +70,16 @@ $home-media3: 620px;
   box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
     -1px 0 10px rgba(206, 206, 206, 0.445);
 
-  aspect-ratio: 1 / 1.2;
-  @media screen and (max-width: $home-media2) {
-    aspect-ratio: 1 / 0.7;
-  }
-  @media screen and (max-width: $home-media3) {
-    aspect-ratio: 1 / 0.55;
-  }
+  // aspect-ratio: 1 / 1.2;
+  // @media screen and (max-width: $home-media2) {
+  //   aspect-ratio: 1 / 0.7;
+  // }
+  // @media screen and (max-width: $home-media3) {
+  //   aspect-ratio: 1 / 0.55;
+  // }
 
   .oeuvres__article-figure-img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 0.9;
     @media screen and (max-width: $home-media2) {
       aspect-ratio: 1 / 0.7;
     }
@@ -95,18 +95,24 @@ $home-media3: 620px;
   margin: 4rem 3rem;
 }
 
-.oeuvres__article-text {
+.oeuvres__article-text-container {
   display: grid;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
 }
 
 // PARCOURS------------------------------------------------------------------------------------------------
 
-.parcours__global-container {
-  margin: 2rem auto 5rem auto;
-  max-width: 70rem;
-}
+// .parcours__global-container {
+//   margin: 2rem auto 5rem auto;
+//   max-width: 70rem;
+// }
 
 .parcours__flex-container {
   display: flex;
@@ -118,20 +124,46 @@ $home-media3: 620px;
 
 .parcours__article {
   margin: 0 2rem;
+  box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
+    -1px 0 10px rgba(206, 206, 206, 0.445);
+  p {
+    text-align: center;
+    margin: 1rem 0;
+  }
 }
-.parcours__article-figure img {
+
+.parcours__article-figure {
   height: 25rem;
   max-width: 60rem;
 }
 
 // INMANQUABLE--------------------------------------------------------------------------------------------
 
-.inmanquable__section-container {
-  margin: 4rem $margin-row-general;
+$inmanquable-media1: 1250px;
+
+.inmanquable__global-container {
+  margin: 6rem auto;
+  max-width: 80rem;
+
+  @media screen and (max-width: $inmanquable-media1) {
+    max-width: 65rem;
+  }
+  @media screen and (max-width: $home-media2) {
+    max-width: 50rem;
+  }
 }
 
 .inmanquable__section-box {
   @include grid-column-repeat(4, $home-grid-min, 1fr, 4rem, 1rem) {
+    margin-inline: 2rem;
+  }
+  @media screen and (max-width: $inmanquable-media1) {
+    grid-template-columns: repeat(2, minmax($home-grid-min, 1fr));
+  }
+  @media screen and (max-width: $home-media2) {
+    grid-template-columns: repeat(1, minmax($home-grid-min, 1fr));
+  }
+  @media screen and (max-width: $home-media3) {
     margin-inline: 2rem;
   }
 }
@@ -139,3 +171,53 @@ $home-media3: 620px;
 .home-inmanquable__h2 {
   margin: 4rem 3rem;
 }
+.inmanquable__article {
+  box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
+    -1px 0 10px rgba(206, 206, 206, 0.445);
+
+  @media screen and (max-width: $inmanquable-media1) {
+  }
+}
+
+.inmanquable__article-figure-img {
+  aspect-ratio: 1.1 / 1;
+  @media screen and (max-width: $inmanquable-media1) {
+    aspect-ratio: 1.5 / 0.8;
+  }
+  @media screen and (max-width: $home-media2) {
+    aspect-ratio: 1.5 / 0.6;
+  }
+}
+
+// -----------------
+
+.inmanquable__article-text-container {
+  display: grid;
+  justify-content: center;
+  padding: 0.5rem 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+// GENERAL ANIMATIONS & HOVER--------------------------------------------------------------------------------------------
+
+.figure-general {
+  overflow: hidden;
+} 
+
+.img__general-style {
+  transition: 1s ease-in-out;
+}
+
+.article-hover-general img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+

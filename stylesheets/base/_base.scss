@@ -45,6 +45,9 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
 }
 
 // ---------------------------------------------------------------------------
+// body {
+//   background-color: $background-color;
+// }
 
 .img__general-style {
   width: 100%;
@@ -53,9 +56,29 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
 }
 
 .h2__general {
+  font-family: $font-molot;
   font-size: $h2-general-fontsize;
+  letter-spacing: $molot-letter-spacing;letter-spacing: $molot-letter-spacing;
 }
 
-// body {
-//   background-color: $background-color;
-// }
+.h3__general {
+  font-family: $font-molot;
+  font-size: $h3-general-fontsize;
+  letter-spacing: $molot-letter-spacing;
+}
+
+.h4__general-style {
+  font-family: $font-raleway;
+  font-size: 1.6em;
+
+}
+.p__general-style {
+  font-family: $font-raleway;
+  font-size: 1.3em;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
