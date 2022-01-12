@@ -2,14 +2,15 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -39,17 +40,16 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
 ) !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
-
+$base-url: "/assets/" !default;
 
 // ---------------------------------------------------------------------------
 
@@ -57,36 +57,38 @@ $base-url: '/assets/' !default;
 $h2-general-fontsize: 2.5em;
 $h3-general-fontsize: 1.8em;
 $molot-letter-spacing: 0.5px;
-$background-color: #563A36;
-$body-text-color: #ECDBBA;
+$background-color: #563a36;
+$body-text-color: #ecdbba;
 
 // footer and navbar
 
-$navbar-footer-bg-color: #292B29;
-$navbar-footer-font-color: #8E635B;
+$navbar-footer-bg-color: #292b29;
+$navbar-footer-font-color: #8e635b;
 
 // Font
 
-$font-molot: 'Molot', sans-serif;
-$font-raleway: 'Raleway', sans-serif;
+$font-molot: "Molot", sans-serif;
+$font-raleway: "Raleway", sans-serif;
 
 // Navbar
 $navbar-logo-size: 7rem;
 $navbar-text-fontsize: 1.5em;
 $navbar-li-padding: 1rem 0;
-$navbar-li-margin: 0.1vw;
+$navbar-li-margin: 0 0.5rem;
 
-// Footer 
+// Footer
 $social-media-size: 1.8em;
 $footer-copyright-margin: 0;
 
-// Margin
-$margin-row-general: 18vw;
 
 // home page
+$article-box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445),
+  -1px 0 10px rgba(138, 134, 134, 0.445);
+$home-grid-min: 220px; // limit article width, so overall size, but can grow up to 1fr ( see max in grid minmanx ) if enough room
+$home-media-bigger: 1140px;
+$home-media-medium: 820px;
+$home-media-smaller: 620px;
+$inmanquable-media-bigger: 1250px;
 
-// Artistes 
- $artistes-button-color: rgb(39, 42, 44);
-
-
-
+// Artistes
+$artistes-button-color: rgb(39, 42, 44);
