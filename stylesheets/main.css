@@ -410,6 +410,7 @@ body {
   position: relative;
   text-align: center;
   max-width: 25%;
+  margin: 0 auto;
 }
 
 .h2__general .h2__general::first-letter {
@@ -913,7 +914,6 @@ li .navbar__links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem 3rem;
 }
 
 .h3__artistes-article {
