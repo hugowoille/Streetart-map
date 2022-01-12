@@ -10,8 +10,7 @@
 
     margin: 1.9em;
     img {
-        box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
-        -1px 0 10px rgba(206, 206, 206, 0.445);
+        box-shadow: $article-box-shadow;
     }
 }
 
