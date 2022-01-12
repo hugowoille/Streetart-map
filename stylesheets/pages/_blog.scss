@@ -1,0 +1,10 @@
+.blogMain {
+    @include grid-column-repeat(auto-fit, 450px, 1fr, 1rem, 1rem);
+    img{
+        width: 100%;
+    }
+    h1{
+        @extend %extend-titleBlog;
+        margin-left: 2rem;
+    }
+}
