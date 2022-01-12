@@ -11,6 +11,30 @@
 //   width: 100%;
 // }
 
+
+// GENRAL STYLING ------------------------------------------------------------------------------------------------
+
+// card text grid
+.article-text-container {
+  display: grid;
+  justify-content: center;
+  padding: 0.5rem 0;
+  // background-color: white;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.home__h2 {
+  margin: 4rem auto;
+
+}
+
+
+
 // OEUVRES------------------------------------------------------------------------------------------------
 
 // .oeuvres__section__box {
@@ -31,6 +55,7 @@
 // }
 
 // global "card" grid, sizing & media
+
 
 .oeuvres__global-container {
   margin: 2rem auto 5rem auto;
@@ -85,24 +110,6 @@
   }
 }
 
-// -----------------
-.home-oeuvre__h2 {
-  margin: 4rem 3rem;
-}
-
-// card text grid
-.oeuvres__article-text-container {
-  display: grid;
-  justify-content: center;
-  padding: 0.5rem 0;
-  // background-color: white;
-  h2 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
-  }
-}
 
 // PARCOURS------------------------------------------------------------------------------------------------
 
@@ -161,9 +168,6 @@
   }
 }
 
-.home-inmanquable__h2 {
-  margin: 4rem 3rem;
-}
 .inmanquable__article {
   box-shadow: $article-box-shadow;
 
@@ -181,44 +185,72 @@
   }
 }
 
-// -----------------
-
-// card text grid
-.inmanquable__article-text-container {
-  display: grid;
-  justify-content: center;
-  padding: 0.5rem 0;
-  // background-color: white;
-  h2 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
-  }
-}
 
 
 // GENERAL ANIMATIONS & HOVER--------------------------------------------------------------------------------------------
 
- // on article hover, image zoom
+// animation central management
+.article-hover-general:hover {
+  img {
+    transform: scale(1.1);
+  }
+  .article-text-container {
+    h4 {
+      opacity: 0;
+      transition: 0.4s ease; // transition disparistion
+    }
+    > p {
+      opacity: 0;
+      transition: 0.4s ease;
+    }
+  }
+  .button-middle {
+    opacity: 1;
+    }
+}
+
+// on article hover, image zoom
 .figure-general {
   overflow: hidden;
 }
 .img__general-style {
   transition: 0.6s ease-in-out;
 }
-.article-hover-general:hover {
-  img {
-    transform: scale(1.1);
-  }
-}
+
 // -----------------
+// "voir plus" boutton apparition
+.article-text-container {
+  opacity: 1;
+  position: relative;
+  h4 {
+    transition: 1s ease; // transition réapparition
+  }
+  > p {
+    transition: 1s ease;
+  }
+
+}
 
 .button-middle {
-}
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: $molot-letter-spacing;
+  font-family: $font-raleway;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgb(194, 100, 100);
+  padding: 0.9rem 1.4rem;
+  border-radius: 0.2rem;
 
-.oeuvres__article-text-container {
-  opacity: 1;
+  transition: 0.4s ease; // transition bouton
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  // top: 25%;
+  // left: 25%;
 }
 
 // .artcle-hover-general img:not(:hover) {
