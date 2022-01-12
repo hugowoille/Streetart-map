@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.blogMain h1 {
+  font-size: 1rem;
+  font-family: "Molot", sans-serif;
+  color: black;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +12,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -830,6 +836,24 @@ li .navbar__links {
 .article-hover-general img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.blogMain {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.blogMain img {
+  width: 100%;
+}
+
+.blogMain h1 {
+  margin-left: 2rem;
 }
 
 .h2__artistes {
