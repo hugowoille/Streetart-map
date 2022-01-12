@@ -202,3 +202,22 @@ $inmanquable-media1: 1250px;
     text-align: center;
   }
 }
+// GENERAL ANIMATIONS & HOVER--------------------------------------------------------------------------------------------
+
+.figure-general {
+  overflow: hidden;
+} 
+
+.img__general-style {
+  transition: 1s ease-in-out;
+}
+
+.article-hover-general img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
