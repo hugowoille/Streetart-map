@@ -530,30 +530,6 @@ body {
   height: auto;
 }
 
-.artistes__section-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(220px, 2fr))[2];
-      grid-template-columns: repeat(2, minmax(220px, 2fr));
-  -webkit-column-gap: 4rem;
-          column-gap: 4rem;
-  row-gap: 1rem;
-}
-
-@media screen and (max-width: 850px) {
-  .artistes__section-container {
-    -ms-grid-columns: (minmax(200px, 1fr))[1];
-        grid-template-columns: repeat(1, minmax(200px, 1fr));
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .artistes__section-container {
-    -ms-grid-columns: (minmax(200px, 1fr))[1];
-        grid-template-columns: repeat(1, minmax(200px, 1fr));
-  }
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1057,6 +1033,30 @@ li:hover {
 .artistes__container {
   margin: 0 auto;
   max-width: 70rem;
+}
+
+.artistes__section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 2fr))[2];
+      grid-template-columns: repeat(2, minmax(220px, 2fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 }
 
 .categorie_body h2 {
