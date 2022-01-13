@@ -10,6 +10,7 @@
     margin: 1.9em;
     img {
         box-shadow: $article-box-shadow;
+        padding: 0.5rem;
     }
 }
 
@@ -23,9 +24,6 @@
     }
 }
 
-.artistes__figure, .artistes__article {
-    box-sizing: border-box;
-}
 
 .artistes__section-container {
     @include grid-column-repeat(2, 220px, 2fr, 1rem, 4rem)
@@ -40,6 +38,18 @@
     margin: 0 auto;
     max-width: 70rem;
 }
+
+// Artists grid and responsive grid 
+
+.artistes__section-container {
+    @include grid-column-repeat(2, 220px, 2fr, 4rem, 1rem);
+    @media screen and (max-width: 850px) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+      }
+    @media screen and (max-width: 550px) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+      }
+  }
 
 
 
