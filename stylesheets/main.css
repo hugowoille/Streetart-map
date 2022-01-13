@@ -530,6 +530,30 @@ body {
   height: auto;
 }
 
+.artistes__section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 2fr))[2];
+      grid-template-columns: repeat(2, minmax(220px, 2fr));
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+  row-gap: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .artistes__section-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -625,6 +649,13 @@ li:hover {
 .artistes__article a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media screen and (max-width: 915px) {
+  .artistes__article a {
+    padding: 0.8em 2.8em;
+    font-size: smaller;
+  }
 }
 
 @media screen and (max-width: 450px) {
