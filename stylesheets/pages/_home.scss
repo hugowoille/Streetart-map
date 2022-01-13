@@ -52,7 +52,7 @@
 
 
 .oeuvres__global-container {
-  margin: 2rem auto 10rem auto;
+  margin: 2rem auto 9.9rem auto;
   max-width: 80rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
   @media screen and (max-width: $home-media-bigger) {
     max-width: 55rem;
