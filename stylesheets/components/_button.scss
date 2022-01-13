@@ -11,6 +11,10 @@
         transform: scale(1.1);
     }
     margin: 0.3em;
+    @media screen and (max-width: 915px) {
+        padding: 0.8em 2.8em;
+        font-size: smaller;
+      }
     @media screen and (max-width: 450px) {
         padding: 0.6em 2.6em;
         font-size: smaller;
