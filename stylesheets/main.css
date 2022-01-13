@@ -545,7 +545,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
 }
 
 .footer__socialmedia {
@@ -555,8 +554,16 @@ footer {
   height: auto;
 }
 
+.terms-of-use {
+  margin-left: 1em;
+}
+
 .terms-of-use p:hover {
   color: #ECDBBA;
+}
+
+.copyright {
+  margin-right: 1em;
 }
 
 nav {
@@ -724,21 +731,12 @@ li:hover {
 }
 
 @media screen and (max-width: 820px) {
-<<<<<<< HEAD
-  .oeuvres__article .oeuvres__article-figure-img {
-=======
   .oeuvres__article-figure-img {
->>>>>>> LaurentMag-dev
     aspect-ratio: 1 / 0.7;
   }
 }
 
 @media screen and (max-width: 620px) {
-<<<<<<< HEAD
-  .oeuvres__article .oeuvres__article-figure-img {
-    aspect-ratio: 1 / 0.55;
-  }
-=======
   .oeuvres__article-figure-img {
     aspect-ratio: 1 / 0.55;
   }
@@ -747,7 +745,6 @@ li:hover {
 .parcours__global-container {
   margin: 0 auto;
   max-width: 80rem;
->>>>>>> LaurentMag-dev
 }
 
 .parcours__flex-container {
@@ -943,39 +940,6 @@ li:hover {
           transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
-.article-text-container h4 {
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-.article-text-container > p {
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-.button-middle {
-  font-size: 1.3em;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #c26464;
-  padding: 0.9rem 1.4rem;
-  border-radius: 0.2rem;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-=======
->>>>>>> LaurentMag-dev
 .h2__blog {
   display: -webkit-box;
   display: -ms-flexbox;
