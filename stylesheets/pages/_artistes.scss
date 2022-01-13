@@ -27,7 +27,7 @@
 }
 
 .artistes__section-container {
-    @include grid-column-repeat(2, 220px, 2fr, 4rem, 1rem)
+    @include grid-column-repeat(2, 220px, 2fr, 1rem, 4rem)
 }
 
 .span__artistes {
@@ -37,7 +37,7 @@
 
 .artistes__container {
     margin: 0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
 }
 
 

@@ -55,23 +55,22 @@ body {
   object-fit: cover;
 }
 
-
 .h2__general {
   font-family: $font-molot;
   font-size: $h2-general-fontsize;
-  letter-spacing: $molot-letter-spacing;letter-spacing: $molot-letter-spacing;
+  letter-spacing: $molot-letter-spacing;
   text-transform: uppercase;
   position: relative;
-  // border-bottom: 5px solid black;
-  text-align: center;
-  max-width: 25%;
-  margin: 2rem auto 3rem auto;
+  text-align: center; // comment to get text back left side
+  max-width: 25%; // comment to get text back left side
+  margin: 4rem auto;
+}
   .h2__general::first-letter {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 4rem;
     vertical-align: -0.4rem;
   }
-}
+
 .h2__general::before {
   content: "";
   position: absolute;
@@ -81,9 +80,6 @@ body {
   width: 100%;
   height: 5px;
 }
-
-
-
 
 .h3__general {
   font-family: $font-molot;
