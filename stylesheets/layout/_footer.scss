@@ -14,3 +14,9 @@ footer {
     width: $social-media-size;
     height: auto;
   }
+
+  .terms-of-use {
+    p:hover {
+    color: $body-text-color;
+    }
+  }
