@@ -4,7 +4,7 @@
     padding: 1rem;
     img{
         width: 100%;
-        height: 50vh;
+        height: 400px;
         object-fit: cover;
         padding: 0.5rem;
         box-shadow: $article-box-shadow;
@@ -23,7 +23,7 @@
 .art:hover {
     img {
       width: 100%;
-      height: 30vh;
+      height: 200px;
       transform: scale(1.04);
       transition-delay: 100ms;
     }
