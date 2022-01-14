@@ -23,11 +23,6 @@
     }
 }
 
-
-.artistes__section-container {
-    @include grid-column-repeat(2, 220px, 2fr, 1rem, 4rem)
-}
-
 .span__artistes {
     font-weight: 500;
     font-style: italic;
