@@ -5,7 +5,7 @@
   display: flex ;
   justify-content: space-evenly;
   padding: 50px 0 50px;
- font-family: $font-raleway;
+  font-family: $font-raleway;
   font-size: 20px;
   gap:50px;
 a:hover{
@@ -28,5 +28,13 @@ a:hover{
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 900;
+  }
+}
+@media screen and (max-width: 1020px){
+  .contact_us{
+    display: none;
+  }
+  .footer_content{
+    width: 100%;
   }
 }
