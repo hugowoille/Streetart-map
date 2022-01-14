@@ -1,0 +1,79 @@
+.voirplus-container {
+  margin: 2rem auto 10rem auto;
+  max-width: 75rem;
+  @media screen and (max-width: 850px) {
+    max-width: 50rem;
+  }
+}
+
+.voilplus-grid {
+  @include grid-column-repeat(2, 220px, 2fr, 4rem, 4rem) {
+    margin-inline: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+.voirplus__section-info {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 1;
+  gap: 2rem;
+  > * {
+    margin: 0 1rem;
+  }
+  .testvoiplus {
+    flex-basis: 42%;
+  }
+}
+
+.figure-voirplus {
+  @include bgcolor-shadow-padding-radius;
+}
+
+.img_voirplus {
+  aspect-ratio: 1 / 1.2;
+  @media screen and (max-width: $home-media-medium) {
+    aspect-ratio: 1 / 1;
+  }
+  @media screen and (max-width: $home-media-smaller) {
+    aspect-ratio: 1 / 0.8;
+  }
+}
+
+.voirplus-text-container {
+  h4 {
+    color: rgb(194, 100, 100);
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-family: $font-molot;
+    letter-spacing: $molot-letter-spacing;
+  }
+  p {
+    margin: 0 0.2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: gray;
+  }
+}
+// Large Picture ---------------------------------------------------------
+
+.img_voirplus-width {
+  aspect-ratio: 1 / 0.4;
+
+  @media screen and (max-width: 900px) {
+    aspect-ratio: 1 / 0.5;
+  }
+  @media screen and (max-width: $home-media-smaller) {
+    aspect-ratio: 1 / 0.9;
+  }
+}
+
+.voilplus-grid-width {
+  @include grid-column-repeat(1, 220px, 2fr, 4rem, 4rem) {
+    margin-inline: 2rem;
+  }
+}

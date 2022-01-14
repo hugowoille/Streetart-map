@@ -11,6 +11,9 @@
 //   width: 100%;
 // }
 
+.map {
+  box-shadow: 0 4px 20px rgba(180, 177, 177, 0.795);
+}
 
 // GENRAL HOME STYLING ------------------------------------------------------------------------------------------------
 
@@ -19,15 +22,13 @@
   display: grid;
   justify-content: center;
   padding: 0.5rem 0;
-  background-color: white;
-  h2 {
+  background-color: $articles-padding-background-color;
+  h4 {
     text-align: center;
-    color:rgb(194, 100, 100);
-
+    color: rgb(194, 100, 100);
   }
   p {
     text-align: center;
-
   }
 }
 
@@ -50,10 +51,9 @@
 //   }
 // }
 
-
 .oeuvres__global-container {
-  margin: 2rem auto 9.9rem auto;
-  max-width: 80rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
+  margin: 2rem auto 10rem auto;
+  max-width: 75rem; // limit container size (so article size), needed for margin inline auto to have grid container centered
   @media screen and (max-width: $home-media-bigger) {
     max-width: 55rem;
   }
@@ -65,7 +65,7 @@
   }
 
   .oeuvres__box-container {
-    @include grid-column-repeat(4, $home-grid-min, 1fr, 4rem, 3rem) {
+    @include grid-column-repeat(4, $home-grid-min, 1fr, 3rem, 3rem) {
       margin-inline: 2rem;
     }
     @media screen and (max-width: $home-media-bigger) {
@@ -83,18 +83,24 @@
 }
 
 .oeuvres__article {
-  box-shadow: $article-box-shadow;
+  @include bgcolor-shadow-padding-radius;
 }
-  .oeuvres__article-figure-img {
-    aspect-ratio: 1 / 0.9;
-    @media screen and (max-width: $home-media-medium) {
-      aspect-ratio: 1 / 0.7;
-    }
-    @media screen and (max-width: $home-media-smaller) {
-      aspect-ratio: 1 / 0.55;
-    }
+figure {
+  border-radius: 0.1rem;
+}
+.oeuvres__article-figure-img {
+  aspect-ratio: 1 / 0.9;
+  @media screen and (max-width: $home-media-medium) {
+    aspect-ratio: 1 / 0.7;
   }
+  @media screen and (max-width: $home-media-smaller) {
+    aspect-ratio: 1 / 0.55;
+  }
+}
 
+.oeuvre-img-five {
+  object-position: 90% 50%;
+}
 
 // PARCOURS------------------------------------------------------------------------------------------------
 
@@ -111,10 +117,12 @@
   row-gap: 3rem;
 }
 .parcours__article {
+  @include bgcolor-shadow-padding-radius;
   margin: 0 2rem;
-  box-shadow: $article-box-shadow;
-  padding: 0.5rem;
   display: grid;
+  figure {
+    z-index: 0; // to not have the background
+  }
   > * {
     // stack txt & img, they all live in the same area so they stack on top of each other --------
     grid-column: 1 / 2;
@@ -131,7 +139,7 @@
     position: relative;
     width: 30rem;
     padding: 1rem 0 1rem 2rem;
-    background:rgba(194, 100, 100, 0.726);
+    background: rgba(194, 100, 100, 0.726);
   }
   // p::before {
   //   content:"";
@@ -146,20 +154,18 @@
   // }
 }
 
-
 .parcours__article-figure {
   height: 25rem;
   max-width: 60rem;
   z-index: -1; // -1 to have image so animation not cover txt & navbar
 }
 
-
 // INMANQUABLE--------------------------------------------------------------------------------------------
 
 // global "card" grid, sizing & media
 .inmanquable__global-container {
   margin: 6rem auto;
-  max-width: 80rem;
+  max-width: 75rem;
 
   @media screen and (max-width: $inmanquable-media-bigger) {
     max-width: 65rem;
@@ -170,7 +176,7 @@
 }
 
 .inmanquable__section-box {
-  @include grid-column-repeat(4, $home-grid-min, 1fr, 4rem, 1rem) {
+  @include grid-column-repeat(4, $home-grid-min, 1fr, 3rem, 1rem) {
     margin-inline: 2rem;
   }
   @media screen and (max-width: $inmanquable-media-bigger) {
@@ -185,7 +191,7 @@
 }
 
 .inmanquable__article {
-  box-shadow: $article-box-shadow;
+  @include bgcolor-shadow-padding-radius;
 }
 
 .inmanquable__article-figure-img {
@@ -197,7 +203,6 @@
     aspect-ratio: 1.5 / 0.6;
   }
 }
-
 
 // GENERAL ANIMATIONS & HOVER--------------------------------------------------------------------------------------------
 .article-text-container {
@@ -230,7 +235,7 @@
   .button-middle {
     transition-delay: 250ms;
     opacity: 1;
-    }
+  }
 }
 
 // on article hover: image zoom -----------------
@@ -250,7 +255,7 @@
   text-transform: uppercase;
   color: #ffffff;
   background-color: rgb(194, 100, 100);
-  padding: 1rem 1.6rem;
+  padding: 1rem 8%;
   border-radius: 0.2rem;
 
   opacity: 0;
@@ -260,4 +265,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
