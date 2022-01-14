@@ -59,6 +59,8 @@ $h3-general-fontsize: 1.8em;
 $molot-letter-spacing: 0.5px;
 $background-color:  #ebe6dd;
 $body-text-color: #ECDBBA;
+$articles-padding-background-color: #f5f4f3;
+$articles-padding: 0.4rem;
 
 // footer and navbar
 
@@ -82,8 +84,8 @@ $footer-copyright-margin: 0;
 
 
 // home page
-$article-box-shadow: 1px 2px 10px rgba(138, 134, 134, 0.445),
-  -1px 0 10px rgba(138, 134, 134, 0.445);
+$article-box-shadow: 1px 2px 10px rgba(165, 161, 161, 0.445),
+  -1px 0 10px rgba(165, 161, 161, 0.445);
 $home-grid-min: 220px; // limit article width, so overall size, but can grow up to 1fr ( see max in grid minmanx ) if enough room
 $home-media-bigger: 1140px;
 $home-media-medium: 820px;

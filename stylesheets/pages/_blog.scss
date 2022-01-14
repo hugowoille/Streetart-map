@@ -4,11 +4,10 @@
     padding: 1rem;
     img{
         width: 100%;
-        height: 50vh;
+        height: 400px;
         object-fit: cover;
         padding: 0.5rem;
-        box-shadow: 1px 2px 10px rgba(206, 206, 206, 0.445),
-    -1px 0 10px rgba(206, 206, 206, 0.445);
+        box-shadow: $article-box-shadow;
          transition: 0.5s ease-in-out;
         }
     p{
@@ -24,7 +23,7 @@
 .art:hover {
     img {
       width: 100%;
-      height: 30vh;
+      height: 200px;
       transform: scale(1.04);
       transition-delay: 100ms;
     }
