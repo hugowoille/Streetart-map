@@ -9,8 +9,7 @@
 .artistes__figure {
     margin: 1.9em;
     img {
-        box-shadow: $article-box-shadow;
-        padding: 0.5rem;
+        @include bgcolor-shadow-padding-radius;
     }
 }
 
@@ -22,11 +21,6 @@
     p {
         margin-bottom: 1.5em;
     }
-}
-
-
-.artistes__section-container {
-    @include grid-column-repeat(2, 220px, 2fr, 1rem, 4rem)
 }
 
 .span__artistes {

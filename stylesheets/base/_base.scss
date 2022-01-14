@@ -48,6 +48,7 @@ ul, li, p, h1, h2, h3, h4, img, figure, article, section, main, header, nav, foo
 
 body {
   background-color: $background-color;
+  scroll-behavior: smooth;
 }
 
 .img__general-style {
